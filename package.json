@@ -1,0 +1,36 @@
+{
+  "name": "brighty-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "validate": "node scripts/validate-brighty.js",
+    "data": "node scripts/import-brighty.js",
+    "audit": "node scripts/make-brighty-audit.js",
+    "audit:marketplace": "node scripts/make-marketplace-audit.js",
+    "preview": "npx --yes http-server out -c-1"
+  },
+  "dependencies": {
+    "animejs": "^4.5.0",
+    "clsx": "^2.1.1",
+    "embla-carousel": "^8.6.0",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
+    "motion": "^13.2.0",
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.5",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.5",
+    "exceljs": "^4.4.0",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.19"
+  }
+}
