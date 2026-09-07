@@ -39,7 +39,7 @@ export function BestSellerEmbla({ items }) {
         <a href="/catalog?sort=sold">Lihat semua →</a>
       </div>
       <Carousel options={{ align: "start", loop: false }} plugins={plugins}>
-        <SliderContainer>
+        <SliderContainer viewportClassName="bleed" className="bleed-inset">
           {items.map((p) => (
             <Slider
               key={p.slug}

@@ -43,7 +43,7 @@ export function CartDrawer() {
             <div className="drawer-items">
               {items.map((i) => (
                 <article className="cart-line" key={`${i.slug}-${i.size}-${i.color}`}>
-                  <Image src={i.images?.[0]} alt={i.name} width={72} height={96} loading="lazy" />
+                  <Image src={i.images?.[0]} alt={i.name} width={72} height={72} loading="lazy" />
                   <div>
                     <p className="nm" style={{ margin: 0 }}>{i.name}</p>
                     <p className="vr" style={{ margin: "2px 0 0" }}>{i.size} · {i.color}</p>

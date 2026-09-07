@@ -251,11 +251,11 @@ export const Carousel = forwardRef(
 Carousel.displayName = "Carousel";
 
 // ============= SLIDER CONTAINER =============
-export const SliderContainer = forwardRef(({ className, children, ...props }, ref) => {
+export const SliderContainer = forwardRef(({ className, viewportClassName, children, ...props }, ref) => {
   const { emblaRef, orientation } = useCarousel();
 
   return (
-    <div ref={emblaRef} className="overflow-hidden" data-cursor="drag" {...props}>
+    <div ref={emblaRef} className={cn("overflow-hidden", viewportClassName)} data-cursor="drag" {...props}>
       <div
         ref={ref}
         className={cn("flex", orientation === "vertical" ? "flex-col" : "flex-row", className)}

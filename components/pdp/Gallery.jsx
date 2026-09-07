@@ -44,12 +44,14 @@ export function Gallery({ images, name }) {
     <>
       <div className="gallery">
         <div className="thumbs" role="tablist" aria-label="Thumbnail produk">
-          {list.map((src, i) => (
-            <button key={i} className="thumb" role="tab" aria-selected={i === active}
-              aria-current={i === active} aria-label={`Lihat foto ${i + 1}`} onClick={() => setActive(i)}>
-              <Image src={src} alt="" width={76} height={100} loading="lazy" />
-            </button>
-          ))}
+          <div className="thumbs-track">
+            {list.map((src, i) => (
+              <button key={i} className="thumb" role="tab" aria-selected={i === active}
+                aria-current={i === active} aria-label={`Lihat foto ${i + 1}`} onClick={() => setActive(i)}>
+                <Image src={src} alt="" width={76} height={76} loading="lazy" />
+              </button>
+            ))}
+          </div>
         </div>
         <button
           type="button"

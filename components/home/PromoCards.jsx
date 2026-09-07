@@ -35,26 +35,28 @@ export function PromoCards() {
         <h2>Special Promo</h2>
         <a href="/catalog">Lihat semua →</a>
       </div>
-      <Spotlight className="flex gap-3 overflow-x-auto pb-1 scroll-center [scrollbar-width:none]" ProximitySpotlight CursorFlowGradient>
-        {PROMOS.map((p) => (
-          <SpotLightItem key={p.t} className="min-w-[170px] max-w-[210px] shrink-0 border-0">
-            <a
-              href={p.href}
-              className={clsx(
-                "flex h-20 w-full flex-col justify-between rounded-card p-3",
-                "text-xs font-semibold leading-snug transition-transform duration-200 hover:-translate-y-0.5",
-                TONE[p.tone]
-              )}
-            >
-              <span className="opacity-80">{TICKET}</span>
-              <span>
-                <span className="block line-clamp-1 font-display">{p.t}</span>
-                <span className="block line-clamp-2 font-normal opacity-80">{p.d}</span>
-              </span>
-            </a>
-          </SpotLightItem>
-        ))}
-      </Spotlight>
+      <div className="bleed">
+        <Spotlight className="flex gap-3 overflow-x-auto pb-1 scroll-center bleed-inset [scrollbar-width:none]" ProximitySpotlight CursorFlowGradient>
+          {PROMOS.map((p) => (
+            <SpotLightItem key={p.t} className="min-w-[170px] max-w-[210px] shrink-0 border-0">
+              <a
+                href={p.href}
+                className={clsx(
+                  "flex h-full min-h-20 w-full flex-col justify-between rounded-card p-3",
+                  "text-xs font-semibold leading-snug transition-transform duration-200 hover:-translate-y-0.5",
+                  TONE[p.tone]
+                )}
+              >
+                <span className="opacity-80">{TICKET}</span>
+                <span>
+                  <span className="block line-clamp-1 font-display">{p.t}</span>
+                  <span className="block line-clamp-2 font-normal opacity-80">{p.d}</span>
+                </span>
+              </a>
+            </SpotLightItem>
+          ))}
+        </Spotlight>
+      </div>
     </section>
   );
 }

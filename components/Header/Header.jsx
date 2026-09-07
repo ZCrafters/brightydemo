@@ -54,14 +54,16 @@ export function Header() {
           </div>
         </nav>
         <nav className="cat-pills" aria-label="Kategori produk">
-          <a className="cat-pill" href="/catalog">Semua</a>
-          {allCategories.map((c) => (
-            <a key={c} className="cat-pill" href={`/catalog?cat=${c}`}>
-              {SHORT_LABEL[c] || c}
-            </a>
-          ))}
-          <a className="cat-pill cat-pill-hot" href="/catalog?sale=1">Promo</a>
-          <a className="cat-pill" href="/catalog?sort=sold">Best Seller</a>
+          <div className="cat-pills-track">
+            <a className="cat-pill" href="/catalog">Semua</a>
+            {allCategories.map((c) => (
+              <a key={c} className="cat-pill" href={`/catalog?cat=${c}`}>
+                {SHORT_LABEL[c] || c}
+              </a>
+            ))}
+            <a className="cat-pill cat-pill-hot" href="/catalog?sale=1">Promo</a>
+            <a className="cat-pill" href="/catalog?sort=sold">Best Seller</a>
+          </div>
         </nav>
       </header>
     </>
