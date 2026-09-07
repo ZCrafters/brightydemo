@@ -46,7 +46,7 @@ export function CheckoutFlow() {
   const [couponApplied, setCouponApplied] = useState(null);
   const [gift, setGift] = useState(false);
   const [giftNote, setGiftNote] = useState("");
-  const orderId = useMemo(() => "MRV-" + Math.random().toString(36).slice(2, 8).toUpperCase(), []);
+  const orderId = useMemo(() => "BRT-" + Math.random().toString(36).slice(2, 8).toUpperCase(), []);
   const shipCost = SHIP.find((s) => s.id === ship)?.cost || 0;
   const discount = couponApplied?.type === "percent" ? Math.round(subtotal * couponApplied.value) : couponApplied?.type === "flat" ? couponApplied.value : 0;
   const giftCost = gift ? 5000 : 0;
@@ -54,7 +54,7 @@ export function CheckoutFlow() {
 
   const applyCoupon = () => {
     const code = coupon.trim().toUpperCase();
-    const COUPONS = { "MARVEILE10": { type: "percent", value: 0.1, label: "10% off" }, "HEMAT20K": { type: "flat", value: 20000, label: "Rp 20.000 off" } };
+    const COUPONS = { "BRIGHTY10": { type: "percent", value: 0.1, label: "10% off" }, "HEMAT20K": { type: "flat", value: 20000, label: "Rp 20.000 off" } };
     if (COUPONS[code]) { setCouponApplied({ code, ...COUPONS[code] }); }
     else { setCouponApplied({ error: "Kupon tidak valid." }); }
   };
@@ -156,7 +156,7 @@ export function CheckoutFlow() {
                 <label htmlFor="coupon" className="field-label">Kode promo (simulasi)</label>
                 <div className="coupon-input">
                   <input id="coupon" type="text" value={coupon} onChange={(e) => setCoupon(e.target.value)}
-                    placeholder="MARVEILE10 atau HEMAT20K" autoComplete="off" />
+                    placeholder="BRIGHTY10 atau HEMAT20K" autoComplete="off" />
                   <button className="btn btn-outline" type="button" onClick={applyCoupon}>Pakai</button>
                 </div>
                 {couponApplied?.error && <span className="err" role="alert">⚠ {couponApplied.error}</span>}

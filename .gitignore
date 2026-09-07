@@ -3,6 +3,5 @@ node_modules/
 out/
 .env*
 *.xlsx
-!data/marveile-katalog-audit.xlsx
 *.h2d
 dist/
