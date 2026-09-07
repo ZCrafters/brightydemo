@@ -1,5 +1,7 @@
 import { products, bestSellers, newArrivals } from "../lib/products";
 import { HeroCarousel } from "../components/home/HeroCarousel";
+import { MobileShortcuts } from "../components/home/MobileShortcuts";
+import { VoucherPopup } from "../components/home/VoucherPopup";
 import { CategoryGrid, NewArrivals } from "../components/home/HomeSections";
 import { BestSellerEmbla } from "../components/home/BestSellerEmbla";
 import { PromoCards } from "../components/home/PromoCards";
@@ -11,6 +13,7 @@ export default function Home() {
   return (
     <>
       <HeroCarousel />
+      <MobileShortcuts />
       <CouponStrip />
       <PromoCards />
       <CategoryGrid />
@@ -21,6 +24,7 @@ export default function Home() {
       <p className="meta" style={{ marginTop: 24 }}>
         Brighty — body care &amp; brightening Indonesia. {products.length} produk katalog demo · harga mengikuti official store.
       </p>
+      <VoucherPopup />
     </>
   );
 }

@@ -1,22 +1,11 @@
 "use client";
 import clsx from "clsx";
+import { COUPONS, COUPON_TONES as TONE } from "../../lib/coupons";
 import { useToast } from "../ui/Toast";
 
 // Strip kupon swipeable (pola voucher Sociolla): kartu voucher dengan kode
 // yang bisa disalin. Kode & nominal adalah ilustrasi demo — voucher asli
 // hanya tersedia di official store (dinyatakan eksplisit di footnote).
-const COUPONS = [
-  { code: "GLOW15", title: "Voucher 15%", desc: "Min. belanja Rp150rb di official store", tone: "pink" },
-  { code: "ONGKIRGLOW", title: "Gratis Ongkir", desc: "Klaim di official store Brighty", tone: "blue" },
-  { code: "RITUAL10", title: "Bundle Hemat 10%", desc: "Untuk paket rutinitas lengkap", tone: "sand" },
-  { code: "HALOGLOW", title: "Potongan 20K", desc: "Khusus pengguna baru", tone: "pink" },
-];
-
-const TONE = {
-  pink: "bg-glow-1/70 text-primary",
-  blue: "bg-glow-2/70 text-primary",
-  sand: "bg-glow-3/70 text-primary",
-};
 
 const TICKET = (
   <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -37,7 +26,7 @@ export function CouponStrip() {
     }
   };
   return (
-    <section aria-label="Kupon & voucher" className="mt-2">
+    <section aria-label="Kupon & voucher" id="kupon" className="mt-2 scroll-mt-32">
       <div className="section-head">
         <div>
           <h2>Kupon Buat Kamu</h2>

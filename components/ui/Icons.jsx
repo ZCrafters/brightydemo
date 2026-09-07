@@ -27,6 +27,8 @@ export const GridIcon = (p) => <Icon label="Grid" {...p} d="M4 4h7v7H4zM13 4h7v7
 export const ListIcon = (p) => <Icon label="Daftar" {...p} d="M4 6h16M4 12h16M4 18h16" />;
 export const ShareIcon = (p) => <Icon label="Bagikan" {...p} d="M16 6l-4-4-4 4M12 2v14M5 12v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" />;
 export const HeartIcon = (p) => <Icon label="Wishlist" {...p} d="M12 20.5S4 15.5 4 9.8A4.3 4.3 0 0 1 8.3 5.5c1.6 0 2.9.9 3.7 2.2a4.6 4.6 0 0 1 3.7-2.2A4.3 4.3 0 0 1 20 9.8c0 5.7-8 10.7-8 10.7z" />;
+export const TagIcon = (p) => <Icon label="Promo" {...p}><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z" /><circle cx={7.5} cy={7.5} r={1.2} /></Icon>;
+export const GiftIcon = (p) => <Icon label="Hadiah" {...p}><path d="M4 8.5h16V12H4zM6 12v8.5h12V12M12 8.5V20.5" /><path d="M12 8.5C10 8.5 7.6 8.4 6.6 6.9c-.7-1.1 0-2.4 1.4-2.4 2 0 4 4 4 4zm0 0c2 0 4.4-.1 5.4-1.6 1.2-1.1.5-2.4-1-2.4-2 0-4.4 4-4.4 4z" /></Icon>;
 
 export const StarIcon = ({ size = 14, filled }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true"

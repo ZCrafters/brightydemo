@@ -1,21 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 // Utility layer di atas globals.css yang sudah ada (preflight OFF agar tidak merusak CSS lama).
 const tokens = {
-  bg: "#fff5f9",
+  bg: "#eef6fd",
   surface: "#ffffff",
-  ink: "#4a1e35",
-  muted: "#96697e",
-  line: "#f5d9e6",
-  primary: "#7c1d4e",
+  ink: "#1f3350",
+  muted: "#5a7391",
+  line: "#d2e5f4",
+  primary: "#0b5cab",
   accent: "#e6007e",
   "accent-dark": "#b0006e",
   badge: "#e11d63",
   star: "#b45309",
   success: "#166534",
   danger: "#e11d63",
-  "glow-1": "#ffd0e3",
-  "glow-2": "#ffe3ee",
-  "glow-3": "#fff0f6",
+  "glow-1": "#cfe7fa",
+  "glow-2": "#e2f1fc",
+  "glow-3": "#f2f9fe",
 };
 
 module.exports = {
