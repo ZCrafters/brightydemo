@@ -28,8 +28,9 @@
 `bundle` Bundle & Paket → map label di `lib/products.js` (`CATEGORY_LABELS`).
 
 ## Design tokens (app/globals.css)
-Palet "Blueberry": sky dominan `#eef6fd`, navy `#0b5cab`, aksen hot pink `#e6007e`,
-gradien glow `#cfe7fa → #e2f1fc → #f2f9fe`. Font Outfit + Cabinet Grotesk.
+Palet "Sky brighter + pink pastel": bg `#f0f8ff`, ink `#1f3350`, primary
+biru `#1864b8`, aksen pink pastel `#ff4d8d`, gradien glow `#d6ecff → #e6f3fe → #f2faff`.
+Font Outfit + Cabinet Grotesk.
 
 ## Stack & komponen utama
 - Next.js 14 (static export) + Tailwind v3 (utility layer, preflight OFF, token = palet di atas)

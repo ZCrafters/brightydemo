@@ -25,3 +25,10 @@
 - Shadow/grid/ritual hardcoded diselaraskan ke navy; spotlight tetap pink.
 - Semua pasangan teks lolos WCAG AA (dihitung: ink 12.75, muted 4.89,
   primary 6.70, aksen 4.50).
+
+## 2026-09-07 (malam) — Retheme Sky brighter + pink pastel
+- Iterasi dari Blueberry: background lebih putih kebiruan, primary biru
+  lebih teal-leaning (`#1864b8`), aksen pink lebih kalem (`#ff4d8d`),
+  badge/cta bahaya pakai rose `#e91e63` (text putih di atas, AA-large 4.35).
+- Glow sky family: `#d6ecff → #e6f3fe → #f2faff`. Bayangan card/hero/grid
+  + panel ritual navy disesuaikan ke `#1864b8`/`#0a2f52` (AA).
