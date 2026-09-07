@@ -30,7 +30,7 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
   font-family: "Outfit", "Satoshi", "Helvetica Neue", Arial, system-ui, sans-serif;
@@ -376,7 +376,7 @@ details.acc .acc-body { padding: 0 16px 16px; font-size: 14px; color: var(--colo
 .foot-cols a:hover { color: var(--color-accent); }
 .foot-giant { font-size: clamp(72px, 15vw, 210px); margin: 4px 0 0; }
 /* Teks raksasa bergradien mengikuti kursor (ui-layouts cursor-follow-text) */
-.animated-text { font-family: "Cabinet Grotesk", "Outfit", system-ui, sans-serif; font-weight: 800; text-align: center; line-height: 0.85; letter-spacing: -0.04em; user-select: none; width: 100%; background: radial-gradient(340px circle at var(--text-mouse-x, 50%) var(--text-mouse-y, 50%), var(--color-accent), var(--color-primary) 78%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.animated-text { font-family: "Cabinet Grotesk", "Outfit", system-ui, sans-serif; font-weight: 800; text-align: center; line-height: 0.85; letter-spacing: -0.04em; user-select: none; width: 100%; max-width: 100%; overflow-wrap: anywhere; background: radial-gradient(340px circle at var(--text-mouse-x, 50%) var(--text-mouse-y, 50%), var(--color-accent), var(--color-primary) 78%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .pay-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .pay-chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: 8px; font-size: 12px; font-weight: 800; letter-spacing: 0.04em; color: var(--color-muted); }
 .foot-bottom { border-top: 1px solid var(--color-line); padding: 14px 20px; text-align: center; font-size: 12px; color: var(--color-muted); }
@@ -437,6 +437,9 @@ details.acc .acc-body { padding: 0 16px 16px; font-size: 14px; color: var(--colo
   .ritual-sticky { position: static; height: auto; min-height: 0; padding: 48px 20px; }
   .ritual-panel { min-height: 0; border-radius: 28px; }
   .ritual-steps { grid-template-columns: 1fr; max-width: 420px; }
+  /* Floor 72px di .foot-giant tidak menyusut lagi di bawah 480px lebar layar —
+     kata tunggal "brighty" (tanpa spasi utk wrap) jadi overflow horizontal di HP. */
+  .foot-giant { font-size: clamp(34px, 13vw, 90px); }
 }
 @media (min-width: 1440px) {
   .grid { gap: 18px; }

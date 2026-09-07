@@ -8,7 +8,7 @@ const CATS = [
   { slug: "body-serum", label: "Body Serum" },
   { slug: "body-wash", label: "Body Wash" },
   { slug: "underarm-care", label: "Underarm" },
-  { slug: "scrub-mask", label: "Scrub & Mask" },
+  { slug: "bundle", label: "Bundle & Paket" },
   { slug: "toner", label: "Toner & AHA" },
 ];
 

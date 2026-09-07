@@ -12,15 +12,22 @@ const SLIDES = [
   {
     kicker: "BODY CARE CEMERLANG · OFFICIAL BRIGHTY",
     title: "Kulit cerah merata, glowing tiap hari.",
-    text: "Body serum, scrub & underarm care terlaris — rutinitas cerah yang nyaman dipakai rutin.",
+    text: "Body serum, body wash & underarm care terlaris — rutinitas cerah yang nyaman dipakai rutin.",
     cta: "Belanja Sekarang",
     href: "/catalog",
-    pick: (ps) => ps.filter((p) => p.heroFlag).slice(0, 3),
+    // Satu produk representatif per kategori (bukan 3 varian sama) supaya foto match copy-nya.
+    pick: (ps) => {
+      const cats = ["body-serum", "body-wash", "underarm-care"];
+      const list = cats
+        .map((c) => ps.find((p) => p.category === c && p.heroFlag) || ps.find((p) => p.category === c))
+        .filter(Boolean);
+      return list.length ? list : ps.filter((p) => p.heroFlag).slice(0, 3);
+    },
   },
   {
     kicker: "UNDERARM CARE",
     title: "Ketiak cerah, halus & wangi.",
-    text: "Rutinitas underarm andalan — cream, toner AHA & hair removal dalam satu tempat.",
+    text: "Rutinitas underarm andalan — cream, scrub & masker ketiak dalam satu tempat.",
     cta: "Lihat Underarm Care",
     href: "/catalog?cat=underarm-care",
     pick: (ps) => {
