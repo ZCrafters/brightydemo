@@ -159,8 +159,7 @@ img { max-width: 100%; }
 .mobile-tab-form { display: flex; flex-direction: column; gap: 10px; }
 .mobile-search-row { display: flex; gap: 8px; }
 .mobile-search-row input { flex: 1; min-height: var(--tap); border: 1px solid var(--color-line); border-radius: 8px; padding: 0 14px; font-size: 14px; background: var(--color-bg); color: inherit; min-width: 0; }
-.mobile-panel-footer { margin-top: auto; padding-top: 16px; }
-.mobile-panel-footer a { display: flex; align-items: center; min-height: var(--tap); font-weight: 600; border-top: 1px solid var(--color-line); }
+.mobile-panel-footer { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--color-line); }
 
 /* ---------- Buttons / pills ---------- */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--color-accent); color: var(--color-accent-ink); font-weight: 700; padding: 0 20px; min-height: var(--tap); border-radius: 999px; font-size: 14px; border: 1px solid transparent; cursor: pointer; transition: transform 180ms var(--ease), opacity 180ms var(--ease); }
